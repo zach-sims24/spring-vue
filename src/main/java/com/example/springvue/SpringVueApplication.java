@@ -11,4 +11,13 @@ public class SpringVueApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(SpringVueApplication.class, args);
     }
+
+    /*
+     * Used to run on external server.
+     */
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SpringVueApplication.class);
+    }
+
 }
