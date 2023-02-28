@@ -2,7 +2,7 @@
   <div>
     <h1>Howdy y'all!!!</h1>
     <div v-if="users != null">
-      <p v-for="user in users">{{ user.first_name }}</p>
+      <p v-for="user in users">{{ user.firstName }}</p>
     </div>
   </div>
 </template>

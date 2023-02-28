@@ -57,7 +57,7 @@ const actions = {
 
 const mutations = {
   SET_ADDRESS(state, { address }) {
-    this.address = address;
+    state.address = address;
   },
 };
 

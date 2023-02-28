@@ -5,6 +5,7 @@ import App from './components/App.vue';
 import routes from './routes';
 import store from './store';
 
+Vue.config.devtools = true;
 Vue.use(VueRouter);
 
 export const router = new VueRouter({

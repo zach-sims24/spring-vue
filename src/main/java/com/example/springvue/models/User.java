@@ -3,7 +3,6 @@ package com.example.springvue.models;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(catalog = "test_schema", name = "users", schema = "test_schema")
@@ -21,12 +20,29 @@ public class User {
     @Column(name = "last_name", length = 200)
     private String lastName;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "address_uuid")
-    private Address primaryAddress;
+    @Column(name = "address_uuid", length = 36)
+    private String addressUuid;
 
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    public User() {
+        this.firstName = "";
+        this.lastName = "";
+    }
+
+    public String getUserUuid() {
+        return userUuid;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAddressUuid() {
+        return addressUuid;
+    }
 
     public void setUserUuid(String userUuid) {
         this.userUuid = userUuid;
@@ -40,11 +56,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public void setPrimaryAddress(Address primaryAddress) {
-        this.primaryAddress = primaryAddress;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setAddressUuid(String addressUuid) {
+        this.addressUuid = addressUuid;
     }
 }

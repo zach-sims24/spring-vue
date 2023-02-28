@@ -23,8 +23,35 @@ public class Address {
     @Column(name = "state", length = 200)
     private String state;
 
-    @Column(name = "zip_code", length = 200)
+    @Column(name = "zip_code", length = 10)
     private String zipCode;
+
+    public Address() {
+        this.address = "";
+        this.city = "";
+        this.state = "";
+        this.zipCode = "";
+    }
+
+    public String getAddressUuid() {
+        return addressUuid;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
 
     public void setAddressUuid(String addressUuid) {
         this.addressUuid = addressUuid;

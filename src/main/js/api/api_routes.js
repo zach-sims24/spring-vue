@@ -1,5 +1,5 @@
 /* eslint-disable */
-const apiUrlBase = 'http://localhost:8080'
+const apiUrlBase = 'http://localhost:8080/rest'
 export default {
   ADDRESS: {
     SHOW: `${apiUrlBase}/addresses`,

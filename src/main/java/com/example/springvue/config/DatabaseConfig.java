@@ -15,12 +15,13 @@ public class DatabaseConfig {
 
     /*
     Steps to add data source:
-    1) Added spring-boot-starter-data-jpa (database resources), spring-boot-starter-data-rest (REST resources), spring-boot-starter-hateoas (REST architecture resources),
-    and mysql:mysql-connector-java (runtime connector for the mysql database driver) dependencies to the build.gradle file (refresh gradle project afterwards)
+    1) Added spring-boot-starter-data-jpa (database resources), spring-boot-starter-data-rest (REST resources), and mysql:mysql-connector-java (runtime connector for the mysql database driver)
+    dependencies to the build.gradle file (refresh gradle project afterwards)
     2) Added datasource properties to the applications.properties file
     3) Created this class, DatabaseConfig.java, which instantiates configuration beans based on the active spring profile
     4) Created the models package and added a class which could represent our user model (User.java) and a class which could represent our address model (Address.java)
     5) Created the repositories package and added a repository interface for interacting with user models and added a repository interface for interacting with address models
+    6) Created the UserController and added a couple of functions which serve as REST endpoints and use our repository classes to pull data from the mysql database
      */
 
     // These spring beans will be instantiated when the spring.profiles.active is set to prd
